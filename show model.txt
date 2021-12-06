@@ -1,0 +1,11 @@
+ @if(Session::has("message"))
+
+<script type="text/javascript">
+$(window).on('load', function() {
+
+$('#exampleLargeModal').modal('show');
+
+		});
+</script>
+
+@endif  
