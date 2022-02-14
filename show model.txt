@@ -1,4 +1,31 @@
- @if(Session::has("message"))
+**********************method one this is for laravel validation form*******************
+
+=>JQUERY CDN MUST BE ADD UPPER THE MODEL SCRIPT CODE
+=>ALSO CAN ADD AFTER CSS
+=>CDN IS
+<!-- jquery cdn -->
+ <script src="{{asset('admin_assets/plugins/jquery/jquery.js')}}"></script>
+ <script src="{{asset('admin_assets/plugins/jquery/jquery.min.js')}}"></script>
+ <script src="{{asset('admin_assets/plugins/bootstrap/js/bootstrap.min.js')}}"></script>
+
+****************HTML CODE OF MODAL*****************
+<div class="modal fade" id="add-unit">
+
+</div>
+
+****************SCRIPT CODE*****************
+
+@if (count($errors) > 0)
+  <script type="text/javascript">
+          $('#add-unit').modal('show');
+  </script>
+@endif
+
+
+
+**********************method two*******************
+
+@if(Session::has("message"))
 
 <script type="text/javascript">
 $(window).on('load', function() {
@@ -9,3 +36,4 @@ $('#exampleLargeModal').modal('show');
 </script>
 
 @endif  
+
